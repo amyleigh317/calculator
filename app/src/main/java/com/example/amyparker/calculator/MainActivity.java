@@ -136,13 +136,17 @@ public class MainActivity extends AppCompatActivity {
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(left.getText().length() != 0){
-                    //clear left box
-                }
-                if(right.getText().length() != 0){
-                    //clear right box
-                }
+                left.setText(null);
+                right.setText(null);
+                TextView result = (TextView) findViewById(R.id.result);
+                result.setText(null);
+                operation = -1;
+                multiply.setBackgroundColor(0);
+                subtract.setBackgroundColor(0);
+                divide.setBackgroundColor(0);
+                add.setBackgroundColor(0);
             }
+
         });
 
 
